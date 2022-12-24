@@ -38,9 +38,9 @@ function ProductImages() {
       </Swiper>
 
       <div className="flex mt-7 justify-between h-[79px] relative">
-        {/* box 2 - translate-x-[7.24vw] */}
-        {/* box 3 - translate-x-52 */}
-        {/* box 4 - translate-x-[21.7vw] */}
+        {/* box 2 - translate-x-[7.35vw] */}
+        {/* box 3 - translate-x-[14.8vw] */}
+        {/* box 4 - translate-x-[22.3vw] */}
         <div className="block absolute bg-white w-[20%] h-[100%] rounded-[15px] bg-opacity-50 border-[#FF7D1A] border-2"></div>
 
         {isHover && <OnHoverImage translateClassName={translateClassName} />}
@@ -65,7 +65,7 @@ function ProductImages() {
           className="rounded-[15px]"
           onMouseEnter={() => {
             setIsHover(true);
-            setTrabslateClassName('translate-x-[7.24vw]');
+            setTrabslateClassName('translate-x-[7.35vw]');
           }}
           onMouseLeave={() => {
             setIsHover(false);
@@ -78,7 +78,7 @@ function ProductImages() {
           className="rounded-[15px]"
           onMouseEnter={() => {
             setIsHover(true);
-            setTrabslateClassName('translate-x-52');
+            setTrabslateClassName('translate-x-[14.8vw]');
           }}
           onMouseLeave={() => {
             setIsHover(false);
@@ -91,7 +91,7 @@ function ProductImages() {
           className="rounded-[15px]"
           onMouseEnter={() => {
             setIsHover(true);
-            setTrabslateClassName('translate-x-[21.7vw]');
+            setTrabslateClassName('translate-x-[22.3vw]');
           }}
           onMouseLeave={() => {
             setIsHover(false);
