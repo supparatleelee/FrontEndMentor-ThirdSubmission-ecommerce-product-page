@@ -11,6 +11,7 @@ import { Navigation } from 'swiper';
 function ProductImages() {
   const [isHover, setIsHover] = useState(false);
   const [translateClassName, setTrabslateClassName] = useState('');
+  const [showedImage, setShowedImage] = useState('product-preview-1');
 
   return (
     <div className="w-[60vw]">
@@ -19,7 +20,7 @@ function ProductImages() {
         slidesPerView={1}
         // onSlideChange={() => console.log('slide change')}
         // onSwiper={(swiper) => console.log(swiper)}
-        className="mySwiper rounded-sm"
+        className="mySwiper"
         navigation={true}
         modules={[Navigation]}
       >
@@ -41,7 +42,6 @@ function ProductImages() {
         {/* box 2 - translate-x-[7.35vw] */}
         {/* box 3 - translate-x-[14.8vw] */}
         {/* box 4 - translate-x-[22.3vw] */}
-        <div className="block absolute bg-white w-[20%] h-[100%] rounded-[15px] bg-opacity-50 border-[#FF7D1A] border-2"></div>
 
         {isHover && <OnHoverImage translateClassName={translateClassName} />}
 
@@ -49,7 +49,7 @@ function ProductImages() {
           src={previewImage1}
           alt="product-preview-1"
           className="rounded-[15px]"
-          onMouseEnter={() => {
+          onMouseEnter={(e) => {
             setIsHover(true);
             setTrabslateClassName(' ');
           }}
@@ -57,13 +57,17 @@ function ProductImages() {
             setIsHover(false);
             setTrabslateClassName('');
           }}
+          onClick={(e) => setShowedImage(e.target.alt)}
         />
+        {showedImage === 'product-preview-1' && (
+          <div className="block absolute bg-white w-[20%] h-[100%] rounded-[15px] bg-opacity-50 border-[#FF7D1A] border-2"></div>
+        )}
 
         <img
           src={previewImage2}
           alt="product-preview-2"
           className="rounded-[15px]"
-          onMouseEnter={() => {
+          onMouseEnter={(e) => {
             setIsHover(true);
             setTrabslateClassName('translate-x-[7.35vw]');
           }}
@@ -71,12 +75,17 @@ function ProductImages() {
             setIsHover(false);
             setTrabslateClassName('');
           }}
+          onClick={(e) => setShowedImage(e.target.alt)}
         />
+        {showedImage === 'product-preview-2' && (
+          <div className="block absolute bg-white w-[20%] h-[100%] rounded-[15px] bg-opacity-50 border-[#FF7D1A] border-2 translate-x-[7.35vw]"></div>
+        )}
+
         <img
           src={previewImage3}
           alt="product-preview-3"
           className="rounded-[15px]"
-          onMouseEnter={() => {
+          onMouseEnter={(e) => {
             setIsHover(true);
             setTrabslateClassName('translate-x-[14.8vw]');
           }}
@@ -84,12 +93,17 @@ function ProductImages() {
             setIsHover(false);
             setTrabslateClassName('');
           }}
+          onClick={(e) => setShowedImage(e.target.alt)}
         />
+        {showedImage === 'product-preview-3' && (
+          <div className="block absolute bg-white w-[20%] h-[100%] rounded-[15px] bg-opacity-50 border-[#FF7D1A] border-2 translate-x-[14.8vw]"></div>
+        )}
+
         <img
           src={previewImage4}
           alt="product-preview-4"
           className="rounded-[15px]"
-          onMouseEnter={() => {
+          onMouseEnter={(e) => {
             setIsHover(true);
             setTrabslateClassName('translate-x-[22.3vw]');
           }}
@@ -97,7 +111,11 @@ function ProductImages() {
             setIsHover(false);
             setTrabslateClassName('');
           }}
+          onClick={(e) => setShowedImage(e.target.alt)}
         />
+        {showedImage === 'product-preview-4' && (
+          <div className="block absolute bg-white w-[20%] h-[100%] rounded-[15px] bg-opacity-50 border-[#FF7D1A] border-2 translate-x-[22.3vw]"></div>
+        )}
       </div>
     </div>
   );
