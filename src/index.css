@@ -21,3 +21,12 @@ code {
 .app {
   font-family: 'Kumbh Sans', sans-serif;
 }
+
+.swiper {
+  width: 400px;
+  border-radius: 25px;
+}
+
+:root {
+  --swiper-navigation-color: #ffff;
+}
