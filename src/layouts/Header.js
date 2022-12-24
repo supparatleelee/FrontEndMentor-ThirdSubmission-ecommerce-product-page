@@ -5,9 +5,11 @@ import NavBar from './NavBar';
 
 function Header() {
   return (
-    <div className="flex justify-between items-center h-[25vh] border-b-[1px]">
-      <div className="flex gap-3">
-        <WebsiteLogo />
+    <div className="flex justify-between items-center h-[14vh] border-b-[1px]">
+      <div className="flex gap-12">
+        <button>
+          <WebsiteLogo />
+        </button>
 
         <NavBar />
       </div>

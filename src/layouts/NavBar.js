@@ -2,7 +2,7 @@ import React from 'react';
 
 function NavBar() {
   return (
-    <ul className="flex gap-3 text-stone-500">
+    <ul className="flex gap-7 text-stone-500">
       <li>
         <button>Collections</button>
       </li>
