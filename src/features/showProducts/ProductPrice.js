@@ -1,6 +1,19 @@
+import { useState } from 'react';
 import { CartWhite, Minus, Plus } from '../../assets/icons';
 
 function ProductPrice() {
+  const [totalItem, setTotalItem] = useState(0);
+
+  const handleOnMius = () => {
+    if (totalItem > 0) {
+      setTotalItem(totalItem - 1);
+    }
+  };
+
+  const handleOnPlus = () => {
+    setTotalItem(totalItem + 1);
+  };
+
   return (
     <div className="h-[60%] flex flex-col justify-between mt-6">
       <div className="flex gap-3 items-center">
@@ -14,13 +27,19 @@ function ProductPrice() {
 
       <div className="flex gap-4 mt-8">
         <div className="flex items-center">
-          <button className="bg-[#F7F8FD] pt-6 pb-6 pl-5 pr-5 rounded-tl-xl rounded-bl-xl">
+          <button
+            className="bg-[#F7F8FD] pt-6 pb-6 pl-5 pr-5 rounded-tl-xl rounded-bl-xl"
+            onClick={handleOnMius}
+          >
             <Minus />
           </button>
           <span className="bg-[#F7F8FD] pt-[1rem] pb-[0.90rem] pl-5 pr-5 font-[700] text-[14px]">
-            0
+            {totalItem}
           </span>
-          <button className="bg-[#F7F8FD] pl-5 pr-5 pt-5 pb-5 rounded-tr-xl rounded-br-xl">
+          <button
+            className="bg-[#F7F8FD] pl-5 pr-5 pt-5 pb-5 rounded-tr-xl rounded-br-xl"
+            onClick={handleOnPlus}
+          >
             <Plus />
           </button>
         </div>
