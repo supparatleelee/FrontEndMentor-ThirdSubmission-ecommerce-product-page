@@ -28,23 +28,23 @@ function ProductPrice() {
       <div className="flex gap-4 mt-8">
         <div className="flex items-center">
           <button
-            className="bg-[#F7F8FD] pt-6 pb-6 pl-5 pr-5 rounded-tl-xl rounded-bl-xl"
+            className="bg-[#F7F8FD] pt-6 pb-6 pl-5 pr-5 rounded-tl-xl rounded-bl-xl hover:contrast-[.95]"
             onClick={handleOnMius}
           >
             <Minus />
           </button>
-          <span className="bg-[#F7F8FD] pt-[1rem] pb-[0.90rem] pl-5 pr-5 font-[700] text-[14px]">
+          <span className="bg-[#F7F8FD] pt-[1rem] pb-[0.90rem] pl-5 pr-5 font-[700] text-[14px] w-[54px]">
             {totalItem}
           </span>
           <button
-            className="bg-[#F7F8FD] pl-5 pr-5 pt-5 pb-5 rounded-tr-xl rounded-br-xl"
+            className="bg-[#F7F8FD] pl-5 pr-5 pt-5 pb-5 rounded-tr-xl rounded-br-xl hover:contrast-[.95]"
             onClick={handleOnPlus}
           >
             <Plus />
           </button>
         </div>
 
-        <button className="flex items-center bg-[#FF7D1A] w-56 rounded-xl justify-center gap-3 text-[14px] shadow-[#FF7D1A] shadow-2xl">
+        <button className="flex items-center bg-[#FF7D1A] w-56 rounded-xl justify-center gap-3 text-[14px] shadow-[#FF7D1A] shadow-2xl hover:bg-[#fba361]">
           <CartWhite />
           <span className="text-[#ffff] font-[700]">Add to cart</span>
         </button>
