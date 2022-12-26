@@ -6,7 +6,7 @@ import NavBar from './NavBar';
 function Header() {
   return (
     <div className="flex justify-between items-center h-[14vh] border-b-[1px]">
-      <div className="flex gap-12">
+      <div className="flex gap-12 h-[100%]">
         <button>
           <WebsiteLogo />
         </button>
